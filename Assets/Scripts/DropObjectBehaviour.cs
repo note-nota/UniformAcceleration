@@ -9,14 +9,13 @@ namespace UniformAcceleration
         [SerializeField]
         protected FrameControlPanel frameCtr;
         [SerializeField]
-        private GameObject shadowObject;
+        protected GameObject shadowObject;
 
         protected GravityMoveAbstract gravity;
         protected Vector3 initPosition;
         protected ShadowObjectsManager objectsManager = new ShadowObjectsManager();
 
-        // Start is called before the first frame update
-        void Start()
+        protected virtual void Start()
         {
             objectsManager.Init(shadowObject);
 
@@ -27,7 +26,7 @@ namespace UniformAcceleration
 
         protected abstract void StartAction();
 
-        private void ResetAction()
+        protected virtual void ResetAction()
         {
             transform.position = initPosition;
             objectsManager.UnableAllObjects();
