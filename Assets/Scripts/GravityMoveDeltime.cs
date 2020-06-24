@@ -7,8 +7,8 @@ namespace UniformAcceleration
 
         public override void Update(float time)
         {
-            nowVelocity += GRAVITY * (time - lastTime);
             nowPosition += nowVelocity * (time - lastTime);
+            nowVelocity += GRAVITY * (time - lastTime);
             lastTime = time;
         }
 
