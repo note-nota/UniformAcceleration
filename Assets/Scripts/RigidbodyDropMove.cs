@@ -16,6 +16,7 @@ namespace UniformAcceleration
 
         protected override void StartAction()
         {
+            ActionFrame();
             rigidbody.useGravity = true;
             frameCtr.SetFrameEvent(ActionFrame);
         }
