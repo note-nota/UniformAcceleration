@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameCtr: {fileID: 659194927}
-  shadowObject: {fileID: 6757140097293884865, guid: 3b88a9397eed463478fda7fc159771d1,
+  shadowObject: {fileID: 6612160091374560141, guid: c7452d06dfe53724583e6ba39c2c5eec,
     type: 3}
 --- !u!23 &175318617
 MeshRenderer:
@@ -266,7 +266,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c81ff3fb235e185468a8179ffde2ef06, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameCtr: {fileID: 659194927}
-  shadowObject: {fileID: 6757140097293884865, guid: 3b88a9397eed463478fda7fc159771d1,
+  shadowObject: {fileID: 1671708812237449143, guid: 3dd16be4dd2c44b4ea5ebc49ef08ea03,
     type: 3}
 --- !u!23 &661351358
 MeshRenderer:
@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameCtr: {fileID: 659194927}
-  shadowObject: {fileID: 6757140097293884865, guid: 3b88a9397eed463478fda7fc159771d1,
+  shadowObject: {fileID: 2458133315672406755, guid: 9af80a00b1c1b5748b798b47a68856fc,
     type: 3}
 --- !u!23 &1830343652
 MeshRenderer:
