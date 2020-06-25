@@ -11,6 +11,8 @@ namespace UniformAcceleration
         [SerializeField]
         private Slider slider;
         [SerializeField]
+        private Text deltaTimeText;
+        [SerializeField]
         private Button startButton;
         [SerializeField]
         private Button resetButton;
@@ -22,24 +24,21 @@ namespace UniformAcceleration
 
         private float lasttime;
 
-        // Start is called before the first frame update
         void Start()
         {
             lasttime = Time.time;
             StartTimer(slider.value);
-            slider.onValueChanged.AddListener(var => StartTimer(var));
+            slider.onValueChanged.AddListener(var => 
+            {
+                deltaTimeText.text = GetDeltaTimeTextFormat(var);
+                StartTimer(var);
+            });
             startButton.onClick.AddListener(() => OnStartButton.Invoke());
             resetButton.onClick.AddListener(() =>
             {
                 ClearFrameEvent();
                 OnResetButton.Invoke();
             });
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
 
         void StartTimer(float seconds)
@@ -84,6 +83,11 @@ namespace UniformAcceleration
         public void SetResetEvent(UnityAction action)
         {
             OnResetButton.AddListener(action);
+        }
+
+        private string GetDeltaTimeTextFormat(float seconds)
+        {
+            return $"delta Time : {seconds:0.00} [s]";
         }
 
     }
